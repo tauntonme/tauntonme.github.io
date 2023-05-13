@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en-UK">
+<head>
+	<meta charset="UTF-8" />
+	<title>Signals at West Buckland Railway</title>
+	<meta name="description" content="Model Engineering by Jon Freeman B.Eng.Hons">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Jon Freeman">
+	<meta name="robots" content="all">
+	<link href="http://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet" type="text/css">
+<style>
+body {margin:0;}
+
+nav {
+/*  overflow: hidden;*/
+/*  background-color: #333;*/
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+nav a {
+/*  float: left;*/
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: blue;
+}
+
+li {
+    float: left;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    font-family: verdana;
+    font-size: 14px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: cornflowerblue}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+p {
+    font-family: verdana;
+    font-size: 14px;
+}
+
+</style>
+</head>
+<body>
+<nav>
+  <ul>
+    <li><a href="home.html" target="mdest">Home</a></li>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn">Electronics</a>
+      <div class="dropdown-content">
+	<a href="std_interface.html" target="mdest">A "Standard" System Interface</a>
+	<a href="position_sensor.html" target="mdest">A "Standard" Position Sensor</a>
+	<a href="controllers.html" target="mdest">Control Systems</a>
+	<a href="coding.html" target="mdest">Coding</a>
+	<a href="power.html" target="mdest">Electric Supply</a>
+	<a href="wheeldetector1.html" target="mdest">Wheel Detectors and Axle Counters</a>
+	<!--
+    <a href="SmartReg/smartreg.html" target="mdest">'Smart Regulator' - A new approach to Electric Loco design</a>
+	<a href="elec/STM3.html" target="mdest">NEW 'STM3_ESC' Dual Brushless Motor Electronic Speed Controller</a>
+        <a href="elec/petelec_electronics.html" target="mdest">Electronics and Software used in 'The Brute' Petrol Elec Loco</a>
+        <a href="elec/powerdump.html" target="mdest">Avoiding Over-Voltage damage using Regenerative Braking</a>
+        <a href="solar.html" target="mdest">Getting the most out of domestic solar PV</a>
+        <a href="rotcod.html" target="mdest">Fit a Rotary Encoder to your lathe spindle</a>
+        <a href="ncos.html" target="mdest">Numerically Controlled Oscillators - or How to drive motors for CNC</a>
+        <a href="syncrec.html" target="mdest">Synchronous Rectifier - maximising efficiency ?</a>
+        <a href="Swires/TVA97.html" target="mdest">Memories from a previous century !</a>
+    -->
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn">Mechanicals</a>
+      <div class="dropdown-content">
+	<a href="glossary.html" target="mdest">Glossary</a>
+	<a href="moving_part_rule.html" target="mdest">The 'Moving Part Rule'</a>
+	<a href="lev_cross.html" target="mdest">Level Crossing - the Problems</a>
+<!--
+    	<a href="elec/motors/motors.html" target="mdest">All about Brushless Motors for Traction / Locos</a>
+	<a href="Michigan.html" target="mdest">'Michigan' - Improvements to this Bristol SMEE Petrol Electric</a>
+        <a href="brushless.html" target="mdest">'The Wedge' - A Novel Electric Loco powered by Brushless Motors</a>
+        <a href="chimney/chimneybase.html" target="mdest">Machining a Loco Chimney Base using CNC</a>
+        <a href="64/index.html" target="mdest">Design and build of a pair of 64xx class steam locos in 7<sup>1</sup>/<sub>4</sub> inch gauge, sold on</a>
+-->
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn">J.P.Semaphores</a>
+      <div class="dropdown-content">
+	<a href="semaphore_update.html" target="mdest">Semaphore Signals</a>
+<!--	<a href="me_alt.html" target="mdest">Mechanical drawings</a>
+	<a href="me_brute.html" target="mdest">Electrical interface spec and design</a>
+        <a href="http://tauntonme.org.uk/oilyrag/images/autumn2016web.pdf" target="mdest">
+	Or however you want to sort this</a>
+-->
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn">Projects</a>
+      <div class="dropdown-content">
+	<a href="rt.html" target="mdest">Raised Track</a>
+	<a href="glt.html" target="mdest">Ground Level Track</a>
+	<a href="lev_cross.html" target="mdest">Identify the Problems</a>
+	<!--<a href="me_brute.html" target="mdest">Mechanical interlocks</a>
+        <a href="http://tauntonme.org.uk/oilyrag/images/autumn2016web.pdf" target="mdest">
+	Or however you want to sort this</a>-->
+      </div>
+     </li>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn">Vids</a>
+      <div class="dropdown-content">
+	<a href="https://www.youtube.com/watch?v=YZXtSLwGlSk" target="_blank">Loco Power from Inverter Generator - Apr 2020</a>
+	<a href="https://www.youtube.com/watch?v=C7ZwR2RUA0c" target="_blank">Radio Control Loco Demo - Apr 2020</a>
+<!--	<a href="https://www.youtube.com/watch?v=KGXch0ABYVo" target="_blank">Making Engine / Alternator Sets Work Nicely Pt 1</a>
+	<a href="https://www.youtube.com/watch?v=y219fMnGAJ0" target="_blank">Making Engine / Alternator Sets Work Nicely Pt 2</a>
+	<a href="https://www.youtube.com/watch?v=bQbI7Ybu52E" target="_blank">Low Cost Loco Test - Bristol - July 2020</a>
+	<a href="https://www.youtube.com/watch?v=UCxDrRzxoxY" target="_blank">Driver training at Taunton club night - Sept 2019</a>
+	<a href="https://youtu.be/J6mqqNWgbu4" target="_blank">A Good Day at Vivary Park, 21 Jul 2019 - vid by J Harding</a>
+	<a href="https://youtu.be/oN955otdNns" target="_blank">Jon explains Loco Control Electronics - Nov 2017 - Part 1</a>
+	<a href="https://youtu.be/0PSCYAVYlaM" target="_blank">Jon explains Loco Control Electronics - Nov 2017 - Part 2</a>
+        <a href="https://www.youtube.com/watch?v=Y1Io2_i0AXk" target="_blank">Good video of "The Wedge" loco with descriptions. Made by Taunton Model Engineers 2017</a>
+        <a href="https://www.youtube.com/watch?v=LOh1rOiMhB0" target="_blank">"The Wedge" chassis test run at Vivary Park 2015</a>
+        <a href="https://www.youtube.com/watch?v=nDXnk_C1W7E" target="_blank">Thompson B1 chassis runs on air ! 2013</a>
+        -->
+        <a href="https://www.youtube.com/watch?v=o7Y1O-bp6lA" target="_blank">Launch of 'Francis the Drake' at Vivary Park, Taunton, 2009</a>
+<!-- <video width="450px" controls>
+  <source src="vid/locodemo.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video> -->
+      </div>
+    </li>
+  <li style="float:right"><a href="about.html" target="mdest">About</a></li>
+  </ul>
+</nav>
+<p>:</p>
+<!-- <iframe src="home.html" height="700" width="100%" name="mdest" style="margin-top: 1px; border:none"></iframe> -->
+<iframe src="home.html" width="100%" name="mdest" style="height: 92vh; padding-left: 5px; margin-top: 1px; border:none"></iframe>
+</body>
+</html>

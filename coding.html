@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Signals at West Buckland Railway</title>
+	<meta name="description" content="'Brushless Brute' and 'Wedge' locomotives, days out in the park in Taunton and Bristol">
+	<link rel="stylesheet" media="screen" href="s1.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Jon Freeman">
+	<meta name="robots" content="all">
+	<link href="http://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet" type="text/css">
+</head>
+<body>
+<h2><b>Signals for West Buckland Miniature Railway</b></h2>
+<h4>The purpose of the signalling system is to promote safer running of the railway.</h4>
+<h4>Coding - </h4>
+<p>Coding, or programming, may not be for you, but creating code for the controllers used in this project is very much at the <b><i>easy</i></b> end of the spectrum. Please take a moment to read these notes, you will be reassured.</p>
+<p>We need no 'operating system' - no 'Windows' or anything of the sort. Nothing has internet access. There are no 'corporate' connections - we have nothing to do with Microsoft, Google, Amazon, or anyone else! We can not be hacked!</p>
+<p>It's easy to look at a project such as our railway signalling system and see it all as one huge, possibly overwhelming problem. It isn't. It really isn't. It's perhaps better thought of as a system performing a number of quite simple tasks together.  Each task is quite small, manageable and understandable, and this is reflected in the "programming style" encouraged by the programming language we use - "C++" (See <a href="https://www.w3schools.com/cpp/default.asp" target="_blank">Here</a> for a gentle intro to C++).</p>
+<p>One design topology would involve use of one central controller running one central control algorithm looking after control of the whole system. This is perfectly workable, and 10 or more years ago this would perhaps have been the only model for consideration. Today, however, small controllers are so inexpensive, reliable and versatile that arguments can be made for distributing control functions around a networked system.  This distributed topology can be thought to make life easier for those of us building and maintaining the system.  For example, if a problem arises with the level crossing gates it might be better to look for any problem close to a localised level crossing controller, near where the problem is.  Centralised or distributed control, it makes little difference to the total coding effort, but arguably breaking the system into a number of more digestible chunks seems sensible.</p>
+<br />
+<p>Controller code is easy to understand. It consists of just two sections : -</p>
+<ul><li>Startup Code</li><li>Forever Loop</li></ul>
+<p>The Startup Code section is where all connected external objects (railway signals, turnouts, gate switches etc) are modelled as code "Objects", network, timers and other controller features get initialised. Perhaps more simply, this tells the controller what it's needed to control.</p>
+<p>The Forever Loop is where the control algorithms are executed. As the name suggests, this is a loop of code that repeats forever (or until the power goes off). A practical forever loop will usually be used in conjunction with a timer (which is part of the controller) regulating the loop repetition rate.</p>
+<h4>Trivial Coding Example</h4>
+<p>Suppose we have two gates and an alarm. The alarm is to sound if either gate is not in the "open" position (open for safe train passage).</p>
+<p>In Startup Code we will have declared three 'objects', one alarm named "GateAlarm" and two gates "Gate1" and "Gate2", along with sufficient info about gates and alarm to make subsequent use easy. Then in the Forever Loop we may include the following code fragment : -</p>
+<pre>   
+        if    (Gate1.open AND Gate2.open)
+            GateAlarm   (OFF)
+        else
+            GateAlarm   (ON)
+            </pre>
+<p>The "Gate1.open AND Gate2.open" phrase is a <a href="https://en.wikipedia.org/wiki/Boolean_expression" target="_blank">"Boolean expression".</a> Here the 'gate.open' function returns 'true' if the gate is open, 'false' otherwise, so in this example both gate.open functions must return 'true' for the alarm to be 'OFF'. If either or both gates return 'false' because a gate is not fully open the alarm is switched ON. The gate positions are tested, and the alarm state updated, on every pass through the Forever Loop. Typically a loop control timer ensures the loop repeats maybe 10, 50, 100 or however many times per second.</p>
+<p>Signals are controlled using the same method. The 'Boolean expression' can be of any pratical length, testing the state of some or all inputs connected and configured.  Key words connecting parts of the Boolean expression are AND, OR and NOT. Parenthesis () are used to enforce precedence - same rules as in algebra.</p>
+<br />
+</body>
+</html>
+

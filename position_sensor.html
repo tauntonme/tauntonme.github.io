@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Signals at West Buckland Railway</title>
+	<meta name="description" content="'Brushless Brute' and 'Wedge' locomotives, days out in the park in Taunton and Bristol">
+	<link rel="stylesheet" media="screen" href="s1.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Jon Freeman">
+	<meta name="robots" content="all">
+	<link href="http://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet" type="text/css">
+<style>
+div {
+  background-color: lightgrey;
+  float: left;
+  width: 60%;
+  border: 15px solid green;
+  padding: 50px;
+  margin: 10px;
+}
+</style>
+
+</head>
+<body>
+<h2><b>Signals for West Buckland Miniature Railway</b></h2>
+<h4>The purpose of the signalling system is to promote safer running of the railway.</h4>
+<br />
+<h3>'Universal' Position Sensor</h3>
+<br />
+<div>
+<p>This describes a dual Hall effect proximity detector of use in aiding compliance with the 'Moving Part Rule'. The circuit schematic is <a href="img/Position_Sensor - Schematic.pdf" target="_blank">here.</a></p>
+<p>The TLE4964-6M Hall sensors are used, see data sheet <a href= "https://www.infineon.com/dgdl/Infineon-TLE4964-6M-DataSheet-v01_20-EN.pdf?fileId=db3a30434039e4f701404e2117c81fe3" target="_blank">here.</a></p>
+<p>Other types of limit switch may be used, the advantages of this Hall sensor design being :</p>
+<ul><li>Small size</li><li>Low cost (&lt; £4 per switch-pair)</li><li>Robust</li><li>No vulnerable moving switch contacts</li><li>Works in unclean conditions (unlike optical switches)</li><li>Simple wiring (2 switches, only 3 wires)</li><li>Built in LEDs aid installation</li></ul>
+<h3>How it Works</h3>
+<p>Two Hall sensors are fitted to the board. Motion of a moving part is connected to some magnet holder such that a small magnet (3mm dia, 4mm long, see it <a href="https://uk.farnell.com/standexmeder/smco5-3x4mm/magnet-permanent/dp/1079497" target="_blank">here</a>) 
+is moved between being directly above one at either limit of motion.  With no magnet near, the sensor draws a tiny current, guaranteed &lt; 2.5mA.</p>
+<p>As described in the data sheet, the Hall sensor Q output switches to GND in presence of an in-spec magnetic field.  This is used to power an LED, increasing current consumption as limited by supply voltage and series resistor values.</p>
+<p>The 'Standard Interface' Input recognises currents &lt; 3mA as '0', with currents &gt; 9mA registering '1'.  Hysteresis designed into the Hall sensor and the controller input stages provides for noise immunity, ensuring clean transition between states.</p>
+</div>
+<br />
+	<figure class="polnp" style="float:right; width: 35%;border:0">
+		<a target="_blank" href="img/Position_Sensor2.jpg">
+			<img src="img/Position_Sensor2.jpg" style="width: 100%;border:0">
+		</a>
+		<figcaption>Position Sensor Circuit Board</figcaption>
+	</figure>
+
+<br />
+
+<br />
+</body>
+</html>
+

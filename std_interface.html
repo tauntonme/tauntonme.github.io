@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Signals at West Buckland Railway</title>
+	<meta name="description" content="'Brushless Brute' and 'Wedge' locomotives, days out in the park in Taunton and Bristol">
+	<link rel="stylesheet" media="screen" href="s1.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Jon Freeman">
+	<meta name="robots" content="all">
+	<link href="http://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet" type="text/css">
+</head>
+<body>
+<h2><b>Signals for West Buckland Miniature Railway</b></h2>
+<h4>The purpose of the signalling system is to promote safer running of the railway.</h4>
+<br />
+<h4>Minimal "Standard" Interface design and objective</h4>
+<br />
+<p>The Minimal Standard Interface follows from the <a href="moving_part_rule.html">'Moving Part Rule'</a>, which specifies two electrical signals reporting position to be read as inputs to the signalling system.</p>
+<p>The Minimal Standard Interface includes one 'Moving Part Rule' input pair and introduces a pair of signalling system 'output' electrical signals for general purpose use.</p>
+<p>The signalling system comprises a Controller (or controllers), and Peripherals.  The list of peripherals includes railway light and semaphore signals, gates (considered individually or grouped), track turnouts, track traversers, and train position sensors.</p>
+<p>Peripherals may require an electrical power supply. A 50 volt DC bus will be run across the site for this. Peripherals may then be connected using six wires - 2 power and 4 electrical signals.</p>
+<p>Some peripherals may have 'local intelligence' with 'CAN Bus' connectivity. Such peripherals will need only four wires for complete connection.</p>
+<h4>Example of use - Lineside Railway Signal</h4>
+<p>Coloured light and semaphore signals are accommodated.</p>
+<h4>Semaphore</h4>
+<p>Semaphore signal arms need to comply with the Moving Part Rule, position of the arm being reported back to the signalling system using the two controller input lines from the Standard Interface.  One of the Standard Interface controller output lines could be considered sufficient to enable some mechanical actuator. In practice one of the four possible states will be specified to indicate 'Clear', the other three to show 'Danger'.</p>
+<h4>Coloured Light</h4>
+<p>With no moving parts, the output pair are 'looped back' to the inputs.  This informs the controller a coloured light signal head is present and functional.  The two controller outputs will be decoded to show one of 'Red', 'Green', 'Black', and optionally 'Yellow' aspects.</p>
+<!--<p>Complexity is an enemy.</p>
+<p>All reasonable efforts will be made to "Keep It  &pm;Simple" - applied to all aspects of the system.</p>
+<p>This page gives a summary of wisdom distilled from numerous discussions between a fair number of interested members over three or four years.  It describes the principle of a "Universal", or hopefully near-universal interface design between elements of the signalling system. This covers principle, without any implementation detail, using lineside signal indicators for example.</p>
+<p>A vocal minority insist the system must allow for inclusion of mechanical semaphore signals.  Being hugely more complex than coloured lights it is likely all signals will start life as coloured lights but allowance is to be built in to enable seamless interchange between lights and semaphores. This concentrated effort on coming up with a 'standard' interface.</p>
+<p>Semaphore signals are required to comply with the 'Moving Part Rule', which supplies a 2 bit binary position indication feedback to the signalling system - system inputs.</p>
+<p>Coloured light lineside signals will be able to display three or four 'aspects', "Red", "Green", "Black" and optionally "Yellow". This range requires a 2 bit binary code from the signalling system - system outputs.</p>
+<p>Lineside signal heads will be capable of responding to command outputs from the signalling system. Semaphores are to show "Clear" for one of the four possible command values, and "Danger" for the other three, 'moving part' sensors providing feedback evidence of compliance to the system. For light signals, the two bit command is looped back to the input pair, providing evidence to the system the signal head is present and active.</p>
+<br />
+<p>This 2 in 2 out interface is also usable for gate and turnout actuators, and anything we've thought of so far. Standard interfaces may be grouped where, for example, mechanical interlocks are involved.</p>
+<br />
+<p>Including two connections for power, this standard interface connects using six wires.  Many items are physically located close to the signal box such that direct wiring is probably sensible.  For distant items we have talked of network interfaces, network nodes connecting to the wider system using only four wires (two power, two data). Network nodes may support any number of Standard Interfaces.</p>
+!-->
+</body>
+</html>
+

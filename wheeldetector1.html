@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Signals at West Buckland Railway</title>
+	<meta name="description" content="RailwaySignals">
+	<link rel="stylesheet" media="screen" href="s1.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Jon Freeman">
+	<meta name="robots" content="all">
+	<link href="http://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet" type="text/css">
+</head>
+<body>
+<h2>Wheel Detection and Axle Counters - J.F.</h2>
+<h4>May 2021 - Updated Feb 2023</h4>
+<p><b>This page introduces circuits detecting wheels or axles.</b></p>
+<p>** NOTE TO EASE CONFUSION ** - In electronics, 'signal' generally means a voltage on a wire, not to be confused with a pole mounted outdoor indicator.  For clarity I will try to disambiguate by referring to electrical signals as "<b><i>signal circuits</i></b>".</p>
+<p>Many methods exist in common use for detection of trains. We looked at, and rejected :</p>
+<ol>
+  <li>
+    <p><b>Track Circuits - </b>Track circuiting had been ruled out before any thought was given to design of the signalling system, so largely irrelevant, but ...</p>
+    <p>Track circuits were used for many years on main lines where trains passed frequently enough to keep rail heads clean enough for wheels to make satisfactory electrical contact.  This would not be the case on our railways.</p>
+  </li>
+  <li>
+    <p><b>Treadles, Micro switches, Assorted Electro-Mechanicals - </b>All too high maintenance - regular greasing, how to keep water out.</p>
+    <p>Difficult to find a solution likely to prove reliable enough to comply with our overriding <b>Safety</b> aspirations.</p>
+  </li>
+  <li>
+    <p><b>Magnets fixed to rolling stock - </b>Has potential to be reliable, sensors could be reed switches, Hall effect sensors or pickup coils.</p>
+    <p>We hope to welcome visitors from other clubs and societies, bringing their rolling stock.  It would not be reasonable to expect visitors to fit extra boltons or, necessarily, to use our 'compliant' trucks.</p>
+  </li>
+  <li><p><b>Optical - Various - </b>Keeping clean, clearing dead vegetation, too much like hard work.</p></li>
+</ol>
+<p>Train movement and detection systems in use on modern railways today use electronics, working around most of the problems noted above.  Once near ubiquitous track circuiting is making a rapid retreat in favour of a variety of electronic wheel sensors or axle counters, with track circuiting maintaining a place only at terminal stations or other 'ends' where continuous indications of presence or absence of stationary trains will always be useful.</p>
+<p>A variety of electronic axle counter types and designs are in use today, the common feature being paired sensors spaced close together. With two signal circuit outputs, one detector will see the passage of a wheel before the other.  By looking at which came first, and by noting the time between detections, the axle counter provides not only train detection, but direction and speed information also.  If two such systems, some distance apart on the railway, connect back to a common controller, this controller can count the axles into, and out of, a track section.  If the count was (say) zero just before a train enters section it counts axles entering section, will retain a count of axles in the section, until the train passes the second axle counter, which will be arranged to 'count down' the axles leaving section.  On happy days, for any train, the number of axles entering and leaving a section, will match!</p>
+<p>Some axle counter systems in use today, mainly older examples, are quite complex and power hungry, but this <a href="https://web.archive.org/web/20181104152246/http://www.irse.org/knowledge/publicdocuments/3.08%20Rosenberger%20-%20Future%20challenges%20of%20axle%20counting.pdf" target="_blank">Article on Axle Counters</a>, it's certainly worth the read.  It describes in sufficient detail the 'Frauscher wheel sensor' now in use in high number world wide.  The sensor consists of a pair of LC oscillators with the inductors 'L1' and 'L2' placed to be close to passing wheel flanges.  As extra metal comes within range, the magnetic field of the inductor interacts with the passing flange to cause perturbations in oscillator frequency, the amplitude of oscillation, and the supply current to the oscillator.  At heart this comprises a few pence worth of electronics (at the detector head anyway!), some further DSP (digital signal processing) is needed to extract useful data from these essentially analogue electrical signals.</p>
+<p>An A.C. inductive sensor of this type seems a good fit to our requirement, advantages being low cost, simplicity, robustness, weatherproof, no moving parts, not affected by leaves, rust or other line conditions.</p>
+<p>A prototype was designed, built and bench tested - this was late 2020.</p>
+<br />
+<h2>Circuit - How it works</h2>
+<p>Circuit of prototype <a href=".\img\AxleCounter - Schematic.pdf" target="_blank">here (opens in new tab)</a> As shown the design contains two copies of the same circuit for implementation of the full dual-sensor axle counter.  Full axle counter implementation is however unlikely in the near future, a shorter term goal being to implement single wheel sensors capable, hopefully, of detecting the wide range of wheel shapes and sizes seen on a dual gauge 5" and 7<sup>1</sup>/<sub>4</sub>" track.</p>
+<p>The core of the design is a very simple, tried and trusted single JFET transistor 'Colpitts' oscillator (take out the JFET, plug in a triode valve, and you have the original Colpitts design from more than a century ago). Diode D1 conducts on peaks when oscillation amplitude is sufficient, developing a D.C. offset bias.  This voltage varies when power is absorbed from the inductor by approaching metal.  This variation is amplified and level shifted by the two operational amplifier stages to provide an analogue output, readable by the signalling electronics elsewhere.</p>
+<p>The finished item will be a simple 'clip to the rail' fixing with simple cable connection back to the nearest electronics.</p>
+<p>More as it happens.</p>
+<br />
+<h4>Update Feb 2023</h4>
+<p>Progress has been made, slowly as I've had more in life to contend with.</p>
+<p>Our copy of the 'Frauscher' sensor worked !! But ...</p>
+<p>Essentially a pair of simple metal detectors, our Colpitts oscillators do detect approaching and retreating metal objects.  Where our prototype falls down is in the range of different wheels in use on our railway.  Whereas on the 'big' railway different stock may have wheels of different diameters, the flange profile and wheel thickness are essentially constant.  Ths means the sensor 'sees' much the same whatever the wheel.  Not so where we have to cater for all from the dainty 5" gauge pony wheel up to the ballast-crushing 7.25" Darjeeling! The problem comes not in detecting, but in making certain pulse outputs from the sensor pair overlap, proving they are both seeing the same wheel. Either sensor alone works as a simple wheel detector.</p>
+<p>In late 2021 I came up with another idea, designed and built a prototype (<a href=".\img\Sigs_Gilbert_2021_1_Ver26 - Schematic.pdf" target="_blank">See schematic</a>).  This works, is still on my bench, and will be 'proved' on track in due course. </p>
+<br />
+<h2>Circuit - How it works 2</h2>
+<p>This design uses a low cost SA612A IC, which contains a single oscillator, and a double-balanced Gilbert cell 'mixer', more properly described a 'four quadrant analogue multiplier' <a href="https://www.nxp.com/docs/en/data-sheet/SA612A.pdf" target="_blank">See SA612A data</a>. The chip was designed for use as a frequency-changer in superhet radio systems, but what it does is to multiply the analogue oscillator output sinusoid by any electrical signal we apply to the multiplier differential inputs A and B. Multiplier output may be predicted using the trigonometric product identity :</p>
+<p>Eqn 1. <b> sin(x) sin(y) = (cos(x−y)−cos(x+y)) / 2</b></p>
+<p>This implies that when multiplying two sinusoids of frequencies 'x' and 'y' the output has two components, being at the sum and difference frequencies. We also know that anything multiplied by zero, is zero - there will be a steady state output of 0V when 'y' (or 'x') is zero.  Referring to the schematic, oscillator tank coil L1 creates an alternating magnetic field which weakly interacts with pick-up coils L2 and L3, inducing a small voltage in both pick-ups. With nothing to upset the balance, the voltages in the pick-ups are equal, and because of the way they are connected, they cancel each other out, leaving zero input at U1 differential inputs A and B.</p>
+
+<p>That is to say, with no metal in range, the signals picked up will cancel.  As metal approaches one pickup before the other, so the balance is upset and a net output is produced. As the metal moves to be above and equidistant from the pickups so balance is restored. As movement continues balance is again upset and output results but in opposite phase to previously.
+
+<p>There are two resultant outputs, one at double oscillator frequency (x + y), and the other at a frequency of nominally zero (x - y).  It is the difference (zero frequency) component of interest, as with a wheel passing over, the phase reversal of pickup outputs results in perturbation of the steady-state zero-volt D.C. output being of form 'trough-peak' in one direction, and 'peak-trough' in the other. Capacitor C6 effectively short-circuits and eliminates the 'sum' frequency product.</p>
+<p>Some experimentation on site will follow, to find the most suitable frequency range and pick-up coil arrangement.</p>
+<p>Referring to the schematic, U2 is a quad operational amplifier configured as an instrumentation amplifier. It is hoped this can be dispensed with / replaced by fewer components. Further experiments with operating frequency and pick-up coil design will enlighten.</p>
+<br />
+<p>So, we have wheel, train and motion detection sorted sufficient for our signalling system, with scope for future expansion to include speed and direction recording etc.</p>
+<br />
+<h2>A Quick look at the Maths</h2>
+<p>We are only interested in the 'difference frequency' output from the multiplier, the 'sum of frequencies' being of no interest. Therefore we can rewrite Eqn 1 with the unwanted parts omitted as relationship Rel 1 :</p>
+<p>Rel 1. <b> sin(x) sin(y)  &prop; cos(x−y)</b></p>
+<br />
+</body>
+</html>
