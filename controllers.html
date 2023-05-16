@@ -45,22 +45,6 @@
 <p>In general, the position of all moving parts of the railway - semaphore signals, gates, turnouts, locks, levers - must be readable by the signalling system, because it can not act upon information it has not got!.</p>
 
 <!--
-<p>Bear with me. I can justify such a bold and potentially controversial statement in the context of relatively simple control systems - such as our signalling systems.</p>
-<p>The controller runs the "programme" - the code we have written for it using "C" and "C++", a list of instructions. The programme splits cleanly into two sections :</p>
-<ul><li>Startup Code</li><li>Forever Loop</li></ul>
-<p>The Startup code sets up controller conditions, initialises internal timers, counters, converters and all the hardware.  This, if you like, configures and connects the controller to the world it is to control.  Startup code runs once-only at power-up. It can be cryptic, but fortunately our software development tools create most of it for us.  Once we're happy with the startup code, with luck we'll never have to look at it again.</p>
-<p>The Forever loop repeats forever (until the power goes off). In the loop, all inputs are looked at and used to make any changes to outputs in response.  The loop repeats many times per second, making control look 'real time'.  It is the Forever Loop that contains all of our 'what ifs' and details of the semaphores, turnouts, gates, or whatever we are controlling.  All of this can be coded easily enough using "C", so why "C++"?</p>
-<p>"C++" is for <a href="https://en.wikipedia.org/wiki/Object-oriented_programming" target="_blank">'Object Oriented Programming'</a>. What this means for us</p>
-<p>OOP encourages us to create software models of real world 'objects'.  By designing 'objects' with a clean interface (the means of interaction with the object), much of the tiresome internal detail can be hidden from view leaving us to code for object interactions being certain (?) of what they do, without having to be burdened by remembering how they do it!</p>
-<p>This means that more code can migrate into Startup Code, leaving the Forever Loop as much smaller and so easier to read and maintain. (Maybe not the best explanation in the world, but it'll have to do!).  At best, the Forever Loop reduces to little more than a sequence of 'near plain English' Boolean expressions.</p>
-<br />
-<p>Howls of protest will arise. "<i>In my day we used damp string, witchcraft and relays. Don't need computers</i>" but fear not. None of the TME Dinosaur Tendency will have read this far !</p>
-<p>With our system, all we need is a plain English description of requirements for the signal to show "Clear". We take your plain English and reduce it to a 'Boolean Expression' which will still be recognisable as English language, and use this to instruct the system to examine all the input conditions you include and evaluate the expression as 'True' or 'False'.  If then the signal does not behave as you expect, go back and look at what you've asked for and work out for yourself what you missed out. Couldn't be simpler!</p>
-<p>And, of course, there's no need to work out what's needed to make a signal show 'Danger'. It will show 'Danger' whenever your rule for 'Clear' evaluates 'False'.</p>
-<br />
-<p>ST Microelectronics supply low-cost, very easy to use controller boards. Our system will use a number of these of more than one type. The <a href="https://os.mbed.com/platforms/ST-Nucleo-L432KC/" target="_blank">NUCLEO-L432KC (link opens in new tab)</a> at under £10 is likely to feature in several places.  On a pcb with a few other cheap components, one of these could, for example, deal with everything to do with the level crossing, accepting commands and reporting status via a network connection.  Another use might be to provide any practical number of 'Standard Interfaces' built using daisy-chained shift registers accessed through an SPI (Serial Peripheral Interface).</p>
-<p>Another member of the ST family, <a href="https://os.mbed.com/platforms/ST-Discovery-F746NG/" target="_blank">Discovery-F746NG (link opens in new tab)</a> is a contender for the role of 'central' controller.  This has a display (of limited use perhaps) but includes a large non-volatile memory, useful for data logging.</p>
-<p>Not sourced to date - anything for creating a large display panel in the signalbox.  This might be a good project for a junior member with Raspberry Pi experience ?</p>
 -->
 <br />
 <h4>Controller - Detail Overview</h4>
