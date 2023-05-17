@@ -65,6 +65,12 @@
 <h2>A Quick look at the Maths</h2>
 <p>We are only interested in the 'difference frequency' output from the multiplier, the 'sum of frequencies' being of no interest. Therefore we can rewrite Eqn 1 with the unwanted parts omitted as relationship Rel 1 :</p>
 <p>Rel 1. <b> sin(x) sin(y)  &prop; cos(x−y)</b></p>
+	<p>As the frequencies are the same, the quantity (x-y) represents any steady stte phase difference between x and y, a DC level.</p>
+	<p>For completeness, and as we are converting between incompatible angles and voltages, we need to include a factor with dimension of "volt per radian".  There is also a linear coupling coefficient to consider noting that wheels come in varying sizes.  These can be conveniently lumped into constant 'k', hence :</p>
+<p>Rel 1a. <b>k sin(x) sin(y)  &prop; k cos(x−y)</b></p>
+	<p>There will be small phase errors due to stray capacitance etc but these can be ignored.  The 'y' signal relates to 'x' with a phase difference of 0 or &pi; radian.</p>
+	<p>As cos(0) = +1.0, and cos(&pi;) = -1.0, it can be seen a wheel approaching the detector from one direction will cause the detector to output a rising peak followed by a falling trough, and vice versa.</p>
+
 <br />
 </body>
 </html>
