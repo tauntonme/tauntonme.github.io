@@ -1,1 +1,41 @@
-<p>led_lights</p>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Signals at West Buckland Railway</title>
+	<meta name="description" content="'Brushless Brute' and 'Wedge' locomotives, days out in the park in Taunton and Bristol">
+	<link rel="stylesheet" media="screen" href="s1.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Jon Freeman">
+	<meta name="robots" content="all">
+	<link href="http://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet" type="text/css">
+</head>
+<body>
+<h2><b>Signals for West Buckland Miniature Railway</b></h2>
+<h4>The purpose of the signalling system is to promote safer running of the railway.</h4>
+<br />
+<h4>LED Signals</h4>
+<p>Being much lower cost and easier to make than semaphores, LED light signals are the default used on our railways.</p>
+	<p>A first trial printed circuit board was designed using low-cost, low-power dual colour red/green leds.  No surprise, this was considered to be 'not bright enough.
+  Lesson learned, a new design was sought, but there are good and bad ways of going sbout these things.</p>
+	<p>Experience has shown it can be unwise to source anything from unknown sources on the popular internet sales sites. 
+    A more professional approach would involve looking at what's offered by reliable industrial component distributors (R.S., Farnell, Mouser etc),
+   and choosing parts in volume production, from preferably more than one source.</p>
+  <p>Single or multi colour, in short, a multi-colour device was selected, available from Cree and Osram. These contain four light sources - red, green, blue and white.
+  These are designed for use in lighting, are five to ten times (depending how you measure it) brighter than our previous choices, and a board was designed
+  to contain eight such devices. One potential problem, and the reason for our unsatisfactory first choice, whereas they could be soldered by human using a decent soldering iron,
+  these newer devices are 'surface mount' with the connecting pads hidden underneath - you can't get an iron in there! 
+    Fortunately we have found a company in Somerset capable of doing this for us.</p>
+<br />
+<p>A board with LEDs mounted is part of the job.  Each LED will need to be supplied with a reasonably well regulated current to produce the light output we want,
+   and these need to be switched from the signalling control system. Series resistors could be used, but we need to allow for power supply voltage fluctuations,
+ without altering the brightness of the signal too much.</p>
+  <p>Interrogating industrial component suppliers, a search was made for 'LED drivers', and an eminently suitable low cost, variable brightness driver was found, 
+  <a href="https://www.diodes.com/assets/Datasheets/AL8863.pdf" target="_blank"></a>AL8863SP.</p>
+  <p>With few extra components, four of these can accurately control the current to each of the four colours of LED.</p>
+  <p>Driven by four pulse width modulator controller outputs, the lights are controllable to produce any blend of colours at all possible intensities.
+  This is probably more than strictly needed for our signals, but provides a versatile platform for evaluation.</p>
+<br />
+
+</body>
+</html>
