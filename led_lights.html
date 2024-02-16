@@ -27,21 +27,30 @@
   these newer devices are 'surface mount' with the connecting pads hidden underneath - you can't get an iron in there! 
     Fortunately we have found a company in Somerset capable of doing this for us.</p>
 <br />
-	<figure class="polnp" style="float:left; width: 42%;border:10">
+	<figure class="polnp" style="float:left; width: 42%;border:16">
 		<a target="_blank" href="img/LED_only_Disc23.jpg">
 			<img src="img/LED_only_Disc23.jpg" style="width: 100%;border:0">
 		</a>
 		<figcaption>Signal LED Module - CAD Image</figcaption>
 	</figure>
-<p>A board with LEDs mounted is part of the job.  Each LED will need to be supplied with a reasonably well regulated current to produce the light output we want,
+<p>A two inch square board with LEDs mounted is part of the job.  Each LED will need to be supplied with a reasonably well regulated current to produce the light output we want,
    and these need to be switched from the signalling control system. Series resistors could be used, but we need to allow for power supply voltage fluctuations,
  without altering the brightness of the signal too much.</p>
-  <p>Interrogating industrial component suppliers, a search was made for 'LED drivers', and an eminently suitable low cost, variable brightness driver was found, 
+	<p>The eight LEDs are connected as a pair of series connected sets of four, in parallel.  The small resistors shown ensure currents in each set are
+	substantialy the same.  This configuration should work well with supply voltage of 12V or above.</p>
+  <p>Interrogating industrial component suppliers, a search was made for 'LED drivers', and an eminently suitable low cost (£0.65), variable brightness driver was found, 
   <a href="https://www.diodes.com/assets/Datasheets/AL8863.pdf" target="_blank">AL8863SP.</a></p>
   <p>With few extra components, four of these can accurately control the current to each of the four colours of LED.</p>
   <p>Driven by four pulse width modulator controller outputs, the lights are controllable to produce any blend of colours at all possible intensities.
   This is probably more than strictly needed for our signals, but provides a versatile platform for evaluation.</p>
 <br />
 
+	<figure class="polnp" style="float:left; width: 42%;border:16">
+		<a target="_blank" href="img/LED_Driver23_sch.png">
+			<img src="img/LED_Driver23_sch.png" style="width: 100%;border:0">
+		</a>
+		<figcaption>Multicolour LED Controller</figcaption>
+	</figure>
+<br />
 </body>
 </html>
