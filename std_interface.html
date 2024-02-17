@@ -42,8 +42,9 @@
 	<br />
 	<h4>Wiring Up the Railway - 'POTS' vs 'Network' ?</h4>
 	<p>All the above assumes use of 'POTS' (plain old telephone service) technology where every item of signalling equipment is hard-wired back to some signal 'box', a little like a telephone exchange of the 1950s.  That's fine, but we could end up with an awful lot of wires !</p>
-	<p>To help in keeping it simple, we have also designed-in a 'CAN' (Controller Area Network) bus. This could connect to all or any piece of equipment using the same four wire cable, with the potential to reduce wiring complexity from "Total-Nightmare!" to "Near-Trivial"!.</p>
+	<p>To help in keeping it simple, we have also designed-in a 'CAN' (Controller Area Network) bus. This could connect to all or any piece of equipment using the same four wire cable, with the potential to reduce wiring complexity from "Total-Nightmare!" to "Near-Trivial"!.  CAN bus connection also bypasses limitations of the '2 in, 2 out' wired interface.  For example, over the wired interface, the two outputs could be decoded into four states, which for a signal could control one lamp to be 'Red', 'Yellow', 'Green' or 'Off'. A single CAN bus interface module provides local 'intelligence', which could control more than this, more lamps, occulting, alarm, actuator, push button etc.</p>
 	<p>Implementing a CAN Bus is not so trivial but is of no concern to anyone other than the person coding for it! A very good tutorial, of great help to your coding team(!) courtesy of <a href="https://controllerstech.com/can-protocol-in-stm32/" target="_blank">controllerstech.com</a></p>
+<br />
 </body>
 </html>
 
