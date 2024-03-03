@@ -15,12 +15,6 @@
 <h4>The purpose of the signalling system is to promote safer running of the railway.</h4>
 <br />
 <h4>LED Signals</h4>
-<p>Being much lower cost and easier to make than semaphores, LED light signals are the default used on our railways.</p>
-	<p>A first trial printed circuit board was designed using low-cost, low-power dual colour red/green leds.  No surprise, this was considered to be 'not bright enough'.
-  Lesson learned, a new design was sought, but there are ways of going about these things.</p>
-	<p>Experience has shown it can be unwise to source anything from unknown sources on the popular internet sales sites. 
-    A more professional approach would involve looking at what's offered by reliable industrial component distributors (R.S., Farnell, Mouser etc),
-   and choosing parts in volume production, from preferably more than one source.</p>
 <br />
 	<figure class="polnp" style="float:left; width: 50%;border:16">
 		<a target="_blank" href="img/LED_only_Disc23.jpg">
@@ -28,6 +22,12 @@
 		</a>
 		<figcaption>Signal LED Module - CAD Image - Bryter Layter</figcaption>
 	</figure>
+<p>Being much lower cost and easier to make than semaphores, LED light signals are the default used on our railways.</p>
+	<p>A first trial printed circuit board was designed using low-cost, low-power dual colour red/green leds.  No surprise, this was considered to be 'not bright enough'.
+  Lesson learned, a new design was sought, but there are ways of going about these things.</p>
+	<p>Experience has shown it can be unwise to source anything from unknown sources on the popular internet sales sites. 
+    A more professional approach would involve looking at what's offered by reliable industrial component distributors (R.S., Farnell, Mouser etc),
+   and choosing parts in volume production, from preferably more than one source.</p>
   <p>Single or multi colour, in short, a multi-colour device was selected, available from Cree
 	  <a href="https://www.mouser.co.uk/datasheet/2/723/CLQ6B_TKW-2887154.pdf" target="_blank">(see data)</a>
 	  and Osram
@@ -56,6 +56,12 @@
 		<figcaption>Multicolour LED Controller - Schematic</figcaption>
 	</figure>
 <br />
+	<figure class="polnp" style="float:left; width: 50%;border:16">
+		<a target="_blank" href="img/LED_Driver23_pcb.png">
+			<img src="img/LED_Driver23_pcb.png" style="width: 100%;border:10">
+		</a>
+		<figcaption>Multicolour LED Controller - PCB</figcaption>
+	</figure>
 	<p>The 'Multicolour LED Controller' schematic includes a full CAN bus interface.</p>
 	<p>We have the choice of two methods of wiring all the site connections.  We could wire each item individually back to a central signal 'box'.  
 		This would mean combining many twisted pairs (or whatever) into a big fat bundle entering the signal box.  This is the mid-20th century telephone exchange method.</p>
@@ -65,20 +71,15 @@
 	 with CAN bus devices at more distant positions.</p>
 	<p>For lineside railway signals, whether LED or semaphore, the CAN bus interface is preferred as it requires only four electrical connections.  A non-CAN bus signal requires six.
 	 If signal heads are regularly removed, a robust reasonably weather-proof connector will be needed. In this case four pole is preferred.</p>
-	<figure class="polnp" style="float:left; width: 50%;border:16">
-		<a target="_blank" href="img/LED_Driver23_pcb.png">
-			<img src="img/LED_Driver23_pcb.png" style="width: 100%;border:10">
-		</a>
-		<figcaption>Multicolour LED Controller - PCB</figcaption>
-	</figure>
 <br />
-	<p>Update March 2024 - Have now procured the PCBs and all components.  The prototype signal head consists of two 'piggy-backed' circuit boards, a controller system and the display boards.  Controllers were assembled 'in house', but the LED panels use surface mount devices that can not be soldered using traditional hand-soldering. Instead, the job of assembling a batch of 10 was offered to Circuitbase Ltd of Bridgwater.  Tiago, the main man there, was most helpful.  They did a great job, delivering 10 superbly assembled boards in double-quick time.  Excellent service, more work will surely be put their way. Well done!</p>
 	<figure class="polnp" style="float:left; width: 50%;border:16">
 		<a target="_blank" href="img/Assembled_LED_board.png">
 			<img src="img/Assembled_LED_board.png" style="width: 100%;border:10">
 		</a>
 		<figcaption>LED board built at Circuitbase, Bridgwater</figcaption>
 	</figure>
+<br />
+	<p>Update March 2024 - Have now procured the PCBs and all components.  The prototype signal head consists of two 'piggy-backed' circuit boards, a controller system and the display boards.  Controllers were assembled 'in house', but the LED panels use surface mount devices that can not be soldered using traditional hand-soldering. Instead, the job of assembling a batch of 10 was offered to Circuitbase Ltd of Bridgwater.  Tiago, the main man there, was most helpful.  They did a great job, delivering 10 superbly assembled boards in double-quick time.  Excellent service, more work will surely be put their way. Well done!</p>
 	<p>For further information, see our video on <a href="https://www.facebook.com/jon.freeman.31105/videos/722360803412973" target="_blank">Facebook</a></p>
 <br />
 </body>
