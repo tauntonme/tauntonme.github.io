@@ -22,6 +22,14 @@
 		</a>
 		<figcaption>Signal LED Module - CAD Image - Bryter Layter</figcaption>
 	</figure>
+<br />
+	<figure class="polnp" style="float:left; width: 50%;border:16">
+		<a target="_blank" href="img/LED_Driver23_sch.png">
+			<img src="img/LED_Driver23_sch.png" style="width: 100%;border:10">
+		</a>
+		<figcaption>Multicolour LED Controller - Schematic</figcaption>
+	</figure>
+<br />
 <p>Being much lower cost and easier to make than semaphores, LED light signals are the default used on our railways.</p>
 	<p>A first trial printed circuit board was designed using low-cost, low-power dual colour red/green leds.  No surprise, this was considered to be 'not bright enough'.
   Lesson learned, a new design was sought, but there are ways of going about these things.</p>
@@ -40,6 +48,13 @@
 <p>A two inch square board with LEDs mounted is part of the job.  Each LED will need to be supplied with a reasonably well regulated current to produce the light output we want,
    and these need to be switched from the signalling control system. Series resistors could be used, but we need to allow for power supply voltage fluctuations,
  without altering the brightness of the signal too much.</p>
+	<figure class="polnp" style="float:left; width: 50%;border:16">
+		<a target="_blank" href="img/LED_Driver23_pcb.png">
+			<img src="img/LED_Driver23_pcb.png" style="width: 100%;border:10">
+		</a>
+		<figcaption>Multicolour LED Controller - PCB</figcaption>
+	</figure>
+<br />
 	<p>The eight LEDs are connected as a pair of series connected sets of four, in parallel.  The small resistors shown ensure currents in each set are
 	substantialy the same.  This configuration should work well with supply voltage of 12V or above.</p>
   <p>Interrogating industrial component suppliers, a search was made for 'LED drivers', and an eminently suitable low cost (£0.65), variable brightness driver was found, 
@@ -49,19 +64,6 @@
   This is probably more than strictly needed for our signals, but provides a versatile platform for evaluation.</p>
 <br />
 
-	<figure class="polnp" style="float:left; width: 50%;border:16">
-		<a target="_blank" href="img/LED_Driver23_sch.png">
-			<img src="img/LED_Driver23_sch.png" style="width: 100%;border:10">
-		</a>
-		<figcaption>Multicolour LED Controller - Schematic</figcaption>
-	</figure>
-<br />
-	<figure class="polnp" style="float:left; width: 50%;border:16">
-		<a target="_blank" href="img/LED_Driver23_pcb.png">
-			<img src="img/LED_Driver23_pcb.png" style="width: 100%;border:10">
-		</a>
-		<figcaption>Multicolour LED Controller - PCB</figcaption>
-	</figure>
 	<p>The 'Multicolour LED Controller' schematic includes a full CAN bus interface.</p>
 	<p>We have the choice of two methods of wiring all the site connections.  We could wire each item individually back to a central signal 'box'.  
 		This would mean combining many twisted pairs (or whatever) into a big fat bundle entering the signal box.  This is the mid-20th century telephone exchange method.</p>
