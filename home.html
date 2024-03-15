@@ -42,7 +42,16 @@
 	<li>Simplicity</li>
 	</ul>
 	<p>Cost considerations, while important, will not be permitted to compromise the above.</p>
+	<p>On this scale a railway signalling system may be modelled as a simple digital system incorporating multiple Boolean inputs and outputs.  This has been implemented using a number of low-cost, British designed ARM Cortex 32 bit microcontrollers from S T Microelectronics.  Code has been written and developed using the free "STM32CubeIDE" from S T.</p>
+	<p>Anyone aspiring to further develop or modify any of the software or firmware need only install <a href="https://www.st.com/en/development-tools/stm32cubeide.html" target="_blank">STM32CubeIDE</a> and find the relevant code files here. (Other software development suites and IDEs are available.)</p>
 	<br />
+	<p>In line with Cardinal Objectives, two methods of interconnecting system components have been provided : -</p>
+	<ul>
+		<li>Direct wiring of input and output devices to 'IO Expander' boards</li>
+		<li>CAN bus</li>
+	</ul>
+	<p>The former is best suited to the Level Crossing, where many switches and actuators are located physically close to the signal box.</p>
+	<p>CAN bus, the Conroller Area Network, facilitates daisy-chaining numerous more distant nodes using the same 4 wires.</p>
 	<br />
 	<br />
 	<br />
