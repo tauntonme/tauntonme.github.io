@@ -15,8 +15,9 @@
 <h4>The purpose of the signalling system is to promote safer running of the railway.</h4>
 <br />
 <h4>Electrical Power Distribution</h4>
-<p>First thoughts on site-wide power distribution for signalling envisaged low voltage for safety, 50V D.C. was chosen as a compromise being high enough to travel some distance using low-cost cable. Local supplies at lower voltages would be obtained using one of any number of available switch-mode converters designed for the purpose.</p>
-	<p>A suggestion has now been made to consider use of low voltage A.C. instead.  Using a balanced 110V centre tap earthed supply would still comply with 'site safety' concerns.  Adoption of A.C. would require a low cost local D.C. supply at every signal or other equipment site with a benefit of removing need for a low impedance negative return, however the cost would be offset by saving in cable costs.</p>
+<p>First thoughts on site-wide power distribution for signalling envisaged low voltage for safety, 50V D.C. was chosen as a compromise being high enough to travel some distance using low-cost cable. Local supplies at lower voltages would be obtained using one of any number of available switch-mode voltage converters designed for the purpose.</p>
+	<p>As much of the system will be connected to, and controlled over a 'CAN' (Controller Area Network) bus using 'CAT6' network cable, an idea was to use spare twisted-pairs to carry power - much the same as in 'PoE' (Power over Ethernet) CCTV systems.  While this works well for low powers over short distances, it is unlikely to be usable to power point actuator motors or other heavy-use electro-mechanicals.  Separate power cables will be required.</p>
+	<p>A suggestion has now been made to consider use of low voltage A.C. instead.  Using a balanced 110V centre tap earthed supply would still comply with 'site safety' concerns.  Adoption of A.C. would require a low cost local D.C. supply <a = href"https://www.farnell.com/datasheets/2547885.pdf" target="_blank">(such as this)</a> at every signal or other equipment site with a benefit of removing need for a low impedance negative return, however the cost would be offset by saving in voltage converters and cable costs.</p>
 <p>An A.C. supply could be wired to socket outlets for use of power tools etc.</p>	
 </body>
 </html>
