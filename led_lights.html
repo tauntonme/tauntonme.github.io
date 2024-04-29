@@ -44,10 +44,10 @@
   These are designed for use in lighting, are five to ten times (depending how you measure it) brighter than our previous choices, and a board was designed
   to contain eight such devices. One potential problem, and the reason for our unsatisfactory first choice, whereas they could be soldered by human using a decent soldering iron,
   these newer devices are 'surface mount' with the connecting pads hidden underneath - you can't get an iron in there! 
-    Fortunately we have found a company in Somerset capable of doing this for us.</p>
+    Fortunately we have found an electronics company in Somerset capable of doing this.</p>
 <p>A two inch square board with LEDs mounted is part of the job.  Each LED will need to be supplied with a reasonably well regulated current to produce the light output we want,
-   and these need to be switched from the signalling control system. Series resistors could be used, but we need to allow for power supply voltage fluctuations,
- without altering the brightness of the signal too much.</p>
+   and these need to be switched from the signalling control system. Series resistors could be used, but we need to allow for power supply fluctuations,
+ without affecting the brightness or operation of the signal.</p>
 	<figure class="polnp" style="float:left; width: 50%;border:16">
 		<a target="_blank" href="img/LED_Driver23_pcb.png">
 			<img src="img/LED_Driver23_pcb.png" style="width: 100%;border:10">
@@ -107,6 +107,6 @@
 
 <p>With everything seen to work as expected, a polycarbonate enclosure was sourced into which the prototype almost fits.  A revised final PCB will fit perfectly.  The enclosure is IP67 rated, meaning it should be sufficiently weather-proof for outdoor installation.  Other changes between prototype and production include replacing the Nucleo L432 module with a ‘bare metal’ L432 computer chip variant with 48 pins instead of 32, simply to make the PCB layout easier.  This chip will cost around three pounds (half a pint) compared to the tenner for a Nucleo module, but will necessitate use of an external ‘ST-Link’ programmer (for a one-off cost around twenty pounds).
 </p>
-	<p>However, this is TME, where the 'lore' is that spanners will get thrown into any work in progress.  It has now been decreed lineside LED signals will include two lamps.</p>
+	<p>However, this is TME, where the 'lore' is that spanners will get thrown into any work in progress.  It has now been decreed lineside LED signals will include two lamps. Pain yes, big problem no, as this news came before the driver board reworking which can be made to accommodate two LED modules. Of course the revised design will not fit the enclosure previously sourced.</p>
 </body>
 </html>
