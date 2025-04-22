@@ -14,7 +14,7 @@
 <h2><b>Signals for West Buckland Miniature Railway</b></h2>
 <h4>The purpose of the signalling system is to promote safer running of the railway.</h4>
 <br />
-<h4>LED Signals</h4>
+<h4>LED Signals - Updated April 2025</h4>
 <br />
 	<figure class="polnp" style="float:left; width: 50%;border:16">
 		<a target="_blank" href="img/LED_only_Disc23.jpg">
@@ -30,7 +30,14 @@
 		<figcaption>Multicolour LED Controller - Schematic</figcaption>
 	</figure>
 <br />
-<p>Being much lower cost and easier to make than semaphores, LED light signals are the default used on our railways.</p>
+	<p><b>Design of two LED Signal Heads has been completed - single and dual lamp models.</b></p>
+	<p>The dual lamp version builds upon the technology used in the single. Both versions use a low cost STM32L431CB ARM Cortex microcontroller to provide up to 8 independent PWM (pulse width modulator) channels used to set light intensity for up to 8 LED circuits. Schematic (<a href="LED_Driver25 - Schematic.pdf" target="_blank">here.</a>)</p>
+	<p>A sensor of ambient lighting has been included. This is used to modulate signal brightness for enhanced driver comfort.</p>
+	<p>Future single lamp units will be part-built dual units to minimise inventory.</p>
+		<p>Printed circuit files (<a href="LED_Driver25.zip">here</a>), code files all to be found in the code section.</p>
+	<p>There it all is. Printed circuit design files, controller firmware, everything there is to know about it.</p>
+	<p>End of April 2025 update.</p>
+<p>Being much lower cost and easier to make than semaphores, LED light signals will be the default used on our railways.</p>
 	<p>A first trial printed circuit board was designed using low-cost, low-power dual colour red/green leds.  No surprise, this was considered to be 'not bright enough'.
   Lesson learned, a new design was sought, but there are ways of going about these things.</p>
 	<p>Experience has shown it can be unwise to source anything from unknown sources on the popular internet sales sites. 
