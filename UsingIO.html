@@ -17,20 +17,22 @@
 	<p>These boards provide 16 digital input and 16 digital output connection points.</p>
 <br />
 
-	<figure class="polnp" style="float:left; width: 35%;border:20">
+	<figure class="polnp" style="float:left; width: 30%;border:20">
 		<a target="_blank" href="img/sigioexp.png">
 			<img src="img/sigioexp.png" style="width: 100%;border:0">
 		</a>
 		<figcaption>Signalling System In/Out Expansion Module Circuit Board</figcaption>
 	</figure>
   <br />
-	<p>The screw terminal connections for 16 digital inputs are to the left in the figure. Inputs read the state of switches or sensors in the system. These may be for example push buttons, moving part limit switches etc. A positive voltage (min +5V, max +80V) is applied for an input to be 'Active', an input open circuited or connected to 0V 'Ground' makes input 'Inactive'. The red LED near the input screw terminal lights when 'active'.</p>
-	<p>The screw terminal connections for 16 digital outputs are to the right in the figure. Outputs may be used to control lights, motors, actuators, alarm bells etc. The blue LED near the output screw terminal lights when 'active'.  These outputs are low power, and current limited to 15mA. An 'Inactive' output delivers 0mA and is nominally disconnected. An 'Active' output sources a limited output current of 15mA at a voltage up to +22V.</p>
-	<p>An outputs may be used to power one or two inputs.</p>
-	<p>Outputs will in general not be used to directly power signalling equipment, but will be used to drive local MOSFET switches within turnout actuators or other items.</p>
+	<p>The screw terminal connections for 16 digital inputs are to the left in the figure (IN_00 - IN_15).</p>
+	<p>Inputs read the state of switches or sensors in the system. These may be for example push buttons, moving part limit switches etc. A positive voltage (min +5V, max +80V) is applied for an input to be 'Active', an input open circuited or connected to 0V 'Ground' makes input 'Inactive'. The red LED near the input screw terminal lights when 'active'.</p>
+	<p>The screw terminal connections for 16 digital outputs are to the right in the figure (OUT00 - OUT15).</p> 
+	<p>Outputs may be used to control lights, motors, actuators, alarm bells etc. The blue LED near the output screw terminal lights when 'active'.  These outputs are low power, and current limited to 15mA. An 'Inactive' output delivers 0mA and is nominally disconnected. An 'Active' output sources a limited output current of 15mA at a voltage up to +22V.</p>
+	<p>An output may be used to power one or two inputs.  Also four current limited sources are available at P1 to P4. These are for powering inputs or other uses.</p>
+	<p>An output will in general not be used to directly power signalling equipment, but will be used to drive a local MOSFET switch within the item of equipment. This is in keeping with good practice, keeping high power switching and circuitry localised.</p>
 	<br />
 	<p>Inputs and outputs have been designed to be rugged, designed to take some quite outrageous abuse without harm.</p>
 	<br />
-	<p>Looking at the 20-pin connectors near the top and bottom in the figure - the bottom connects using a ribbon connector to a microcontroller board - the 'brain' of the system. The upper connector may be used to daisy-chain another In/Out Expansion Module.</p>
+	<p>Looking at the 16-pin connectors near the top and bottom in the figure - the bottom connects using a ribbon connector to a microcontroller board - the 'brain' of the system. The upper connector may be used to daisy-chain another In/Out Expansion Module.</p>
 </body>
 </html>
