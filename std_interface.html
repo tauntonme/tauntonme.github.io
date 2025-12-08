@@ -14,37 +14,16 @@
 <h2><b>Signals for West Buckland Miniature Railway</b></h2>
 <h4>The purpose of the signalling system is to promote safer running of the railway.</h4>
 <br />
-<h4>Minimal "Standard" Interface design and objective</h4>
+<!--	<h4>Minimal "Standard" Interface design and objectiv</h4>	-->
+<h4>Connecting Up the Signalling System (Dec 2025 update)</h4>
 <br />
-<p>The Minimal Standard Interface follows from the <a href="moving_part_rule.html">'Moving Part Rule'</a>, which specifies two electrical signals reporting position to be read as inputs to the signalling system.</p>
-<p>The Minimal Standard Interface includes one 'Moving Part Rule' input pair and introduces a pair of signalling system 'output' electrical signals for general purpose use.</p>
-<p>The signalling system comprises a Controller (or controllers), and Peripherals.  The list of peripherals includes railway light and semaphore signals, gates (considered individually or grouped), track turnouts, track traversers, and train position sensors.</p>
-<p>Peripherals may require an electrical power supply. A 50 volt DC bus will be run across the site for this. Peripherals may then be connected using six wires - 2 power and 4 electrical signals.</p>
-<p>Some peripherals may have 'local intelligence' with 'CAN Bus' connectivity. Such peripherals will need only four wires for complete connection.</p>
-<h4>Example of use - Lineside Railway Signal</h4>
-<p>Coloured light and semaphore signals are accommodated.</p>
-<h4>Semaphore</h4>
-<p>Semaphore signal arms need to comply with the Moving Part Rule, position of the arm being reported back to the signalling system using the two controller input lines from the Standard Interface.  One of the Standard Interface controller output lines could be considered sufficient to enable some mechanical actuator. In practice one of the four possible states will be specified to indicate 'Clear', the other three to show 'Danger'.</p>
-<h4>Coloured Light</h4>
-<p>With no moving parts, the output pair are 'looped back' to the inputs.  This informs the controller a coloured light signal head is present and functional.  The two controller outputs will be decoded to show one of 'Red', 'Green', 'Black', and optionally 'Yellow' aspects.</p>
-<!--<p>Complexity is an enemy.</p>
-<p>All reasonable efforts will be made to "Keep It  &pm;Simple" - applied to all aspects of the system.</p>
-<p>This page gives a summary of wisdom distilled from numerous discussions between a fair number of interested members over three or four years.  It describes the principle of a "Universal", or hopefully near-universal interface design between elements of the signalling system. This covers principle, without any implementation detail, using lineside signal indicators for example.</p>
-<p>A vocal minority insist the system must allow for inclusion of mechanical semaphore signals.  Being hugely more complex than coloured lights it is likely all signals will start life as coloured lights but allowance is to be built in to enable seamless interchange between lights and semaphores. This concentrated effort on coming up with a 'standard' interface.</p>
-<p>Semaphore signals are required to comply with the 'Moving Part Rule', which supplies a 2 bit binary position indication feedback to the signalling system - system inputs.</p>
-<p>Coloured light lineside signals will be able to display three or four 'aspects', "Red", "Green", "Black" and optionally "Yellow". This range requires a 2 bit binary code from the signalling system - system outputs.</p>
-<p>Lineside signal heads will be capable of responding to command outputs from the signalling system. Semaphores are to show "Clear" for one of the four possible command values, and "Danger" for the other three, 'moving part' sensors providing feedback evidence of compliance to the system. For light signals, the two bit command is looped back to the input pair, providing evidence to the system the signal head is present and active.</p>
-<br />
-<p>This 2 in 2 out interface is also usable for gate and turnout actuators, and anything we've thought of so far. Standard interfaces may be grouped where, for example, mechanical interlocks are involved.</p>
-<br />
-<p>Including two connections for power, this standard interface connects using six wires.  Many items are physically located close to the signal box such that direct wiring is probably sensible.  For distant items we have talked of network interfaces, network nodes connecting to the wider system using only four wires (two power, two data). Network nodes may support any number of Standard Interfaces.</p>
-!-->
+	<p>Signalling System microcontrollers connect to items of signalling equipment using "CAN Bus", a simple network connection with simple wiring and easy to follow rules. Instead of having large bundles of wires being routed around the site, using the CAN bus network most of the site wiring fits into just two cales - a CAT6 network cable and a power distribution cable.</p>
+	<p> To date we have CAN bus twin lamp LED signal heads ready for production.</p>
+	<p>Other essential elements of signalling equipment (including points actuators and axle detectors) are yet to materialise, but these will be built to include the necessary CAN bus interface.</p>
 	<br />
-	<h4>Wiring Up the Railway - 'POTS' vs 'Network' ?</h4>
-	<p>All the above assumes use of 'POTS' (plain old telephone service) technology where every item of signalling equipment is hard-wired back to some signal 'box', a little like a telephone exchange of the 1950s.  That's fine, but we could end up with an awful lot of wires !</p>
-	<p>To help in keeping it simple, we have also designed-in a 'CAN' (Controller Area Network) bus. This could connect to all or any piece of equipment using the same four wire cable, with the potential to reduce wiring complexity from "Total-Nightmare!" to "Near-Trivial"!.  CAN bus connection also bypasses limitations of the '2 in, 2 out' wired interface.  For example, over the wired interface, the two outputs could be decoded into four states, which for a signal could control one lamp to be 'Red', 'Yellow', 'Green' or 'Off'. A single CAN bus interface module provides local 'intelligence', which could control more than this, more lamps, occulting, alarm, actuator, push button etc.</p>
-	<p>Implementing a CAN Bus is not so trivial but is of no concern to anyone other than the person coding for it!</p>
-	<p>The controller we use throughout is the ARM Cortex variant STM32L432KC. </p>
+		<p>The one exception is in the area of the signal box and level crossing where input/output expansion modules are provided to allow direct connection of switches, sounders and similar.</p>
+<br />
+	
 <br />
 	<p>CAN Resources</p>
 	<p></p>
