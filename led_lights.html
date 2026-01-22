@@ -9,10 +9,53 @@
 	<meta name="author" content="Jon Freeman">
 	<meta name="robots" content="all">
 	<link href="http://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet" type="text/css">
+<style>
+div {
+  background-color: lightgrey;
+  float: left;
+  width: auto;
+  border: 15px solid green;
+  padding: 20px;
+  margin: 10px;
+}
+</style>
+
 </head>
 <body>
 <h2><b>Signals for West Buckland Miniature Railway</b></h2>
 <h4>The purpose of the signalling system is to promote safer running of the railway.</h4>
+	<div>
+		<p>Dual LED Signal Head – Outline Specification
+J Freeman	-	January 2026
+
+The signal head features two multi-colour light units, each containing eight high reliability, high brightness multi-colour LEDs manufactured by Cree or Osram.  These are in volume production.
+
+The LEDs are driven by purpose designed, current regulated, variable intensity LED driver integrated circuits. This ensures high reliability, the light intensity remaining as intended over wide supply voltage and temperature ranges.  This is important in reducing constraints on site wiring and power supplies.
+
+An ambient light sensor is included. This allows LED light intensity to be varied to maximise viewing comfort under most weather conditions, including bright sunlight.
+
+The LED drivers are controlled using a low-cost ‘ARM Cortex’ microcontroller (STM32L432) which features a CAN bus interface.  The signal head is controlled by commands addressed to it over the CAN bus. Each signal head has a unique ID, this means that any practical number of signal heads can be ‘daisy-chained’ and controlled over the same CAN bus.  This greatly simplifies site wiring.
+
+As to be supplied, the signal head will be programmable to display any one of three aspects : -
+    • Danger
+    • Caution
+    • Clear
+
+The power-on default is to ‘Danger’.
+
+Designed as part of a system in which safety matters, or ought to matter, switching into states other than ‘Danger’ require the appropriate command to be continuously re-sent at intervals no longer than five seconds.  Failure to meet this timing constraint will cause reversion to ‘Danger’.
+
+In addition, the microcontroller constantly monitors and decodes all CAN bus traffic.  This is useful in confirming wider system integrity – should some other device crash, hog bus bandwidth or broadcast nonsense, all signal heads revert to ‘Danger’.
+
+Use is made of ‘surface mount’ technology requiring assembly by a manufacturer suitably equipped.  Professional assembly ensures excellence in build quality and high reliability.
+
+The design uses only conservatively rated components from known, reputable and trusted manufacturers. Components are only procured through franchised industrial distributors.  These minimum standards are prerequisite for production of electronic products that work to spec, with high reliability.
+
+Data for all major components is available on the signalling web page.  This is a professional design to standards for continuous use in industrial applications, and as such would be expected to exhibit MTBF in terms of years.
+
+
+</p>
+	</div>
 <br />
 <h4>LED Signals - Updated April 2025</h4>
 <br />
