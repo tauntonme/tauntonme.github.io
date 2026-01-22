@@ -25,22 +25,23 @@ div {
 <h2><b>Signals for West Buckland Miniature Railway</b></h2>
 <h4>The purpose of the signalling system is to promote safer running of the railway.</h4>
 	<div>
-		<p>Dual LED Signal Head – Outline Specification
-J Freeman	-	January 2026
+		<p>Dual LED Signal Head – Outline Specification</p>
+<p>J Freeman	-	January 2026</p>
 
-The signal head features two multi-colour light units, each containing eight high reliability, high brightness multi-colour LEDs manufactured by Cree or Osram.  These are in volume production.
+<p>The signal head features two multi-colour light units, each containing eight high reliability, high brightness multi-colour LEDs manufactured by Cree or Osram.  These are in volume production.</p>
 
-The LEDs are driven by purpose designed, current regulated, variable intensity LED driver integrated circuits. This ensures high reliability, the light intensity remaining as intended over wide supply voltage and temperature ranges.  This is important in reducing constraints on site wiring and power supplies.
+<p>The LEDs are driven by purpose designed, current regulated, variable intensity LED driver integrated circuits. This ensures high reliability, the light intensity remaining as intended over wide supply voltage and temperature ranges.  This is important in reducing constraints on site wiring and power supplies.</p>
 
-An ambient light sensor is included. This allows LED light intensity to be varied to maximise viewing comfort under most weather conditions, including bright sunlight.
+<p>An ambient light sensor is included. This allows LED light intensity to be varied to maximise viewing comfort under most weather conditions, including bright sunlight.</p>
 
-The LED drivers are controlled using a low-cost ‘ARM Cortex’ microcontroller (STM32L432) which features a CAN bus interface.  The signal head is controlled by commands addressed to it over the CAN bus. Each signal head has a unique ID, this means that any practical number of signal heads can be ‘daisy-chained’ and controlled over the same CAN bus.  This greatly simplifies site wiring.
+<p>The LED drivers are controlled using a low-cost ‘ARM Cortex’ microcontroller (STM32L432) which features a CAN bus interface.  The signal head is controlled by commands addressed to it over the CAN bus. Each signal head has a unique ID, this means that any practical number of signal heads can be ‘daisy-chained’ and controlled over the same CAN bus.  This greatly simplifies site wiring.</p>
 
-As to be supplied, the signal head will be programmable to display any one of three aspects : -
-    • Danger
-    • Caution
-    • Clear
-
+<p>As to be supplied, the signal head will be programmable to display any one of three aspects : -
+	<ul>
+    <li>Danger</li>
+    <li>Caution</li>
+    <li>Clear</li>
+	</ul>
 The power-on default is to ‘Danger’.
 
 Designed as part of a system in which safety matters, or ought to matter, switching into states other than ‘Danger’ require the appropriate command to be continuously re-sent at intervals no longer than five seconds.  Failure to meet this timing constraint will cause reversion to ‘Danger’.
